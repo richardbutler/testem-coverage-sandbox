@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Test Page</title>
+    <link rel="stylesheet" href="lib/jasmine.css">
+    <script src="lib/jasmine.js"></script>
+    <script src="node_modules/jscoverage-reporter/src/jasmine.jscoverage_reporter.js"></script>
+    <script src="node_modules/jasmine-reporters/src/jasmine.junit_reporter.js"></script>
+    <script>
+        if(location.hash === '#testem')
+            document.write('<script src="/testem.js"></' + 'script>')
+    </script>
+    <script src="lib/jasmine-html.js"></script>
+
+    <script src="cov/hello.js"></script>
+    <script src="tests/hello.spec.js"></script>
+
+  </head>
+  <body>
+    <script>
+        var env = jasmine.getEnv();
+        env.addReporter(new jasmine.JSCoverageReporter('./reports/coverage/'));
+        env.addReporter(new jasmine.JUnitXmlReporter('./reports/junit/'));
+        env.execute();
+    </script>
+  </body>
+</html>

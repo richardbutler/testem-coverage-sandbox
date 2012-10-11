@@ -1,0 +1,18 @@
+framework: jasmine
+test_page: test.html
+
+before_tests: rm -rf cov && jscoverage src cov
+
+src_files:
+  - cov/**/*.js
+  - tests/**/*.spec.js
+
+launchers:
+  PhantomJS:
+    command: phantomjs node_modules/jasmine-reporters/test/phantomjs-testrunner.js http://localhost:7357/test.html
+    
+launch_in_dev:
+  - PhantomJS
+  
+launch_in_ci:
+  - PhantomJS

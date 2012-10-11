@@ -1,0 +1,8 @@
+{
+    "name": "testem-coverage-sandbox",
+    "version": "0.1.0",
+    "dependencies": {
+        "jasmine-reporters": "0.2.1",
+        "jscoverage-reporter": "0.1.0"
+    }
+}
