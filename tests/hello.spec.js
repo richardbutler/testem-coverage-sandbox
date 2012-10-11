@@ -1,6 +1,6 @@
 /*global test, assert, hello*/
 
-var o = typeof(window) !== "undefined" ? this : require( "hello" );
+var o = typeof(window) !== "undefined" ? this : require( "../src/hello" );
 
 describe('say hello', function() {
     it('should say hello', function() {

@@ -1,18 +1,25 @@
 framework: jasmine
 test_page: test.html
 
-before_tests: rm -rf cov && jscoverage src cov
+before_tests:
+  - rm -rf cov && jscoverage src cov
 
 src_files:
   - cov/**/*.js
   - tests/**/*.spec.js
 
 launchers:
-  PhantomJS:
+  Jasmine Browser:
     command: phantomjs node_modules/jasmine-reporters/test/phantomjs-testrunner.js http://localhost:7357/test.html
+    cwd: .
+  Jasmine Node:
+    command: node ./scripts/jscoverage-jasmine-node.js tests --junitreport --output reports/junit/node/
+    cwd: .
     
 launch_in_dev:
-  - PhantomJS
+  - Jasmine Browser
+  - Jasmine Node
   
 launch_in_ci:
-  - PhantomJS
+  - Jasmine Browser
+  - Jasmine Node

@@ -19,8 +19,8 @@
   <body>
     <script>
         var env = jasmine.getEnv();
-        env.addReporter(new jasmine.JSCoverageReporter('./reports/coverage/'));
-        env.addReporter(new jasmine.JUnitXmlReporter('./reports/junit/'));
+        env.addReporter(new jasmine.JSCoverageReporter('./reports/coverage/browser/'));
+        env.addReporter(new jasmine.JUnitXmlReporter('./reports/junit/browser/'));
         env.execute();
     </script>
   </body>
