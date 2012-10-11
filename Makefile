@@ -1,10 +1,10 @@
-install-npm:
-    @sudo npm install -g testem
-    @npm install -d
+install_npm:
+	@npm install -g testem
+	@npm install -d
 
-install-jscoverage:
-    @git clone git://github.com/visionmedia/node-jscoverage.git
-    @cd node-jscoverage && ./configure && make && make install
+install_jscoverage:
+	@git clone git://github.com/visionmedia/node-jscoverage.git
+	@cd node-jscoverage && ./configure && make && make install
 
-install: install-npm install-jscoverage
+install: install_npm install_jscoverage
     
