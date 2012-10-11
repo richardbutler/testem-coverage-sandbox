@@ -6,11 +6,13 @@ JSCoverage example using [http://github.com/airportyh/testem](Testem), [http://p
 Installation
 ------------
 
-```make install```
+```
+make install
+```
 
 Usage
 -----
 
-```testem```
-
-Simple.
+```
+testem
+```
