@@ -1,7 +1,7 @@
 Testem Coverage Sandbox
 =======================
 
-JSCoverage example using [http://github.com/airportyh/testem](Testem), [http://pivotal.github.com/jasmine/](Jasmine) and [http://phantomjs.org](PhantomJS).
+JSCoverage example using [Testem](http://github.com/airportyh/testem), [Jasmine](http://pivotal.github.com/jasmine) and [PhantomJS](http://phantomjs.org).
 
 Installation
 ------------
