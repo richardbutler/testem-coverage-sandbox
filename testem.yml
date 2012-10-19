@@ -2,7 +2,7 @@ framework: jasmine
 test_page: test.html
 
 before_tests:
-  - rm -rf cov && jscoverage src cov
+  - rm -rf cov && jscoverage src cov && rm -rf reports && mkdir reports && mkdir reports/coverage && mkdir reports/junit && mkdir reports/coverage/browser && mkdir reports/junit/browser && mkdir reports/junit/node
 
 src_files:
   - cov/**/*.js
